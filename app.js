@@ -1,7 +1,9 @@
 const app = Vue.createApp({
   data() {
     return {
-      title: "Hello thereeee!!!",
+      title: "New App",
+      author: "Jannaten",
+      age: 23,
     };
   },
 });
