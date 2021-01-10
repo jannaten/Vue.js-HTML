@@ -1,12 +1,13 @@
 const app = Vue.createApp({
   data() {
     return {
+      url: "https://www.github.com/jannaten",
+      urlGoogle: "https://www.google.com",
       showBooks: true,
-      title: "New App",
-      author: "Jannaten",
-      age: 23,
-      x: 0,
-      y: 0,
+      books: [
+        { title: "Book 1", author: "Jannaten", age: 23 },
+        { title: "Book 2", author: "Masood", age: 31 },
+      ],
     };
   },
   methods: {
