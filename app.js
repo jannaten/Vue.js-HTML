@@ -30,6 +30,19 @@ const app = Vue.createApp({
     toggleBooks() {
       this.showBooks = !this.showBooks;
     },
+    // toogleFav(title) {
+    //   const newArr = [...this.books];
+    //   newArr.map((el) => {
+    //     if (el.title === title) {
+    //       el.isFav = !el.isFav;
+    //     }
+    //     return el;
+    //   });
+    //   this.books = newArr;
+    // },
+    toogleBookFav(book) {
+      book.isFav = !book.isFav;
+    },
     handleEvent(e, data) {
       console.log(e, e.type);
       if (data) {
@@ -39,6 +52,11 @@ const app = Vue.createApp({
     handleMousemove(e) {
       this.x = e.offsetX;
       this.y = e.offsetY;
+    },
+  },
+  computed: {
+    filteredBooks() {
+      return this.books.filter((el) => el.isFav);
     },
   },
 });
