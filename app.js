@@ -8,14 +8,14 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    changeTitle() {
-      this.title = "Changed title";
-    },
-    changeTitleWithParams(title) {
-      this.title = title;
-    },
     toggleBooks() {
       this.showBooks = !this.showBooks;
+    },
+    handleEvent(e, data) {
+      console.log(e, e.type);
+      if (data) {
+        console.log(data);
+      }
     },
   },
 });

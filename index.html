@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.0"></script>
+    <style>
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <h1>Hello World</h1>
     <div id="app">
-      <h2 v-if="showBooks">{{title}} - {{author}} - {{age}}</h2>
-      <button v-on:click="age++">Increase Age</button>
-      <button v-on:click="age--">Decrease Age</button>
-      <button @click="title = 'somthing else' ">Change Title V1</button>
-      <button @click="changeTitle">Change Title V2</button>
-      <button @click="changeTitleWithParams('New title')">
-        Change Title V3
-      </button>
+      <div v-if="showBooks">
+        <p>{{title}} - {{author}} - {{age}}</p>
+      </div>
+
       <button @click="toggleBooks">
         <span v-if="!showBooks">Show Books</span>
         <span v-else>Hide Books</span>
       </button>
-      <div v-show="showBooks">Currently showing books</div>
+
+      <br />
+
+      <div class="box" @mouseover="handleEvent($event, 5)"></div>
+      <div class="box" @mouseleave="handleEvent"></div>
+      <div class="box" @dblclick="handleEvent"></div>
+      <div class="box"></div>
     </div>
     <script src="app.js"></script>
   </body>
