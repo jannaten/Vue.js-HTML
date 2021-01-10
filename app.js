@@ -5,8 +5,24 @@ const app = Vue.createApp({
       urlGoogle: "https://www.google.com",
       showBooks: true,
       books: [
-        { title: "Book 1", author: "Jannaten", age: 23 },
-        { title: "Book 2", author: "Masood", age: 31 },
+        {
+          title: "Book 1",
+          author: "Jannaten",
+          img: "assets/1.jpg",
+          isFav: true,
+        },
+        {
+          title: "Book 2",
+          author: "Masood",
+          img: "assets/2.jpg",
+          isFav: false,
+        },
+        {
+          title: "Book 3",
+          author: "Henrikka",
+          img: "assets/3.jpg",
+          isFav: true,
+        },
       ],
     };
   },
