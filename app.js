@@ -1,6 +1,7 @@
 const app = Vue.createApp({
   data() {
     return {
+      showBooks: true,
       title: "New App",
       author: "Jannaten",
       age: 23,
@@ -12,6 +13,9 @@ const app = Vue.createApp({
     },
     changeTitleWithParams(title) {
       this.title = title;
+    },
+    toggleBooks() {
+      this.showBooks = !this.showBooks;
     },
   },
 });
